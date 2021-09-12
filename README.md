@@ -1,70 +1,17 @@
-# yarn-lock-preview README
+# yarn-lock-preview
 
-This is the README for your extension "yarn-lock-preview". After writing up a brief description, we recommend including the following sections.
+[![Version for VS Code Extension](https://vsmarketplacebadge.apphb.com/version-short/youngjuning.yarn-lock-preview.svg?logo=visual-studio-code)](https://marketplace.visualstudio.com/items?itemName=youngjuning.yarn-lock-preview)
+[![](https://vsmarketplacebadge.apphb.com/installs/youngjuning.yarn-lock-preview.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.yarn-lock-preview)
+[![](https://vsmarketplacebadge.apphb.com/rating/youngjuning.yarn-lock-preview.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.yarn-lock-preview)
+[![](https://vsmarketplacebadge.apphb.com/trending-monthly/youngjuning.yarn-lock-preview.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.yarn-lock-preview)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/youngjuning/awesome-frontend-actions)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/youngjuning/awesome-frontend-actions/blob/main/CONTRIBUTING.md)
+[![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-## Features
+Previews yarn.lock file.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+## 洛竹早茶馆
 
-For example if there is an image subfolder under your extension project workspace:
+![](assets/luozhu.png)
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+洛竹，木系前端，现任职于杭城某独角兽跨端基础组。掘金首批签约作者、前端早早聊分享嘉宾、开源爱好者。专注前端开发，涉猎 Devops、Nodejs、Go、Rust 等编程语言和技术栈。信奉终身学习，热爱编程技术，享受写作分享是我的初心。学习之路道阻且长，关注洛竹早茶馆公众号，成长路上不孤单。
