@@ -3,11 +3,18 @@
   "displayName": "Yarn Lock Preview",
   "description": "Previews yarn.lock file",
   "version": "0.0.1",
+  "icon": "assets/logo.png",
+  "license": "MIT",
+  "publisher": "youngjuning",
   "engines": {
     "vscode": "^1.60.0"
   },
   "categories": [
-    "Other"
+    "Visualization"
+  ],
+  "keywords": [
+    "yarn",
+    "preview"
   ],
   "activationEvents": [
     "onCommand:yarn-lock-preview.helloWorld"
@@ -29,6 +36,14 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "commit": "git cz"
+  },
+  "bugs": {
+    "url": "https://github.com/vstirbu/vscode-mermaid-preview/issues"
+  },
+  "homepage": "https://github.com/vstirbu/vscode-mermaid-preview",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youngjuning/juejin-me.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
