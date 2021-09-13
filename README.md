@@ -4,9 +4,9 @@
 [![](https://vsmarketplacebadge.apphb.com/installs/youngjuning.yarn-lock-preview.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.yarn-lock-preview)
 [![](https://vsmarketplacebadge.apphb.com/rating/youngjuning.yarn-lock-preview.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.yarn-lock-preview)
 [![](https://vsmarketplacebadge.apphb.com/trending-monthly/youngjuning.yarn-lock-preview.svg)](https://marketplace.visualstudio.com/items?itemName=youngjuning.yarn-lock-preview)
-[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/youngjuning/awesome-frontend-actions)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/youngjuning/awesome-frontend-actions/blob/main/CONTRIBUTING.md)
 [![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/youngjuning/awesome-frontend-actions)
 
 Previews yarn.lock file.
 
