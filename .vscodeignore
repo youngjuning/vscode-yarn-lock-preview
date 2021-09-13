@@ -10,3 +10,11 @@ vsc-extension-quickstart.md
 **/.eslintrc.json
 **/*.map
 **/*.ts
+
+.cz-config.js
+.prettierrc.js
+.commitlintrc.js
+**/node_modules/**
+yarn-error.log
+web/**
+!web/dist/**

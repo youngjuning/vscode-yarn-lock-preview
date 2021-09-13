@@ -29,21 +29,26 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn run compile",
+    "vscode:prepublish": "yarn esbuild-base --minify",
     "compile": "tsc -p ./",
     "watch": "tsc -watch -p ./",
-    "pretest": "yarn run compile && yarn run lint",
+    "test-compile": "tsc -p ./",
+    "pretest": "yarn test-compile && yarn lint",
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
+    "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/extension.js --external:vscode --format=cjs --platform=node",
+    "esbuild": "yarn esbuild-base --sourcemap",
+    "esbuild-watch": "yarn esbuild-base --sourcemap --watch",
+    "package": "vsce package --no-yarn",
     "commit": "git cz"
   },
   "bugs": {
-    "url": "https://github.com/vstirbu/vscode-mermaid-preview/issues"
+    "url": "https://github.com/youngjuning/vscode-yarn-lock-preview/issues"
   },
-  "homepage": "https://github.com/vstirbu/vscode-mermaid-preview",
+  "homepage": "https://github.com/youngjuning/vscode-yarn-lock-preview",
   "repository": {
     "type": "git",
-    "url": "https://github.com/youngjuning/juejin-me.git"
+    "url": "https://github.com/youngjuning/vscode-yarn-lock-preview.git"
   },
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
@@ -56,12 +61,14 @@
     "commitizen": "^4.2.4",
     "commitlint-config-cz": "^0.13.2",
     "cz-customizable": "^6.3.0",
+    "esbuild": "^0.12.27",
     "eslint": "^7.32.0",
     "glob": "^7.1.7",
     "lint-staged": "^11.1.2",
     "mocha": "^8.4.0",
     "prettier": "^2.4.0",
     "typescript": "^4.4.3",
+    "vsce": "^1.99.0",
     "vscode-test": "^1.5.2",
     "yorkie": "^2.0.0"
   },

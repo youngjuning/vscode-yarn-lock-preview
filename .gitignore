@@ -1,5 +1,18 @@
-out
-dist
-node_modules
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# vscode
 .vscode-test/
 *.vsix
+
+# dependencies
+node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+# production
+out
+dist
+
+# misc
+.DS_Store
