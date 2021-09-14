@@ -27,7 +27,17 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
     webviewPanel.webview.options = {
       enableScripts: true,
     };
-    const json = lockfile.parse(document.getText()).object;
+    let json = lockfile.parse(document.getText());
+    switch (json.type) {
+      case 'merge':
+        // TODO: 处理 merge type
+        break;
+      case 'conflict':
+        // TODO: 处理 conflict type
+        break;
+      default:
+        json = json.object;
+    }
     webviewPanel.webview.html = this.getHtmlForWebview(JSON.stringify(json));
   }
 
