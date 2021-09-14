@@ -1,4 +1,5 @@
 import vscode from 'vscode';
+import * as lockfile from '@yarnpkg/lockfile';
 
 class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
   static register(context: vscode.ExtensionContext): vscode.Disposable {
@@ -18,7 +19,7 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
    * 当自定义编辑器打开时调用。
    */
   async resolveCustomTextEditor(
-    _document: vscode.TextDocument,
+    document: vscode.TextDocument,
     webviewPanel: vscode.WebviewPanel,
     _token: vscode.CancellationToken
   ): Promise<void> {
@@ -26,10 +27,11 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
     webviewPanel.webview.options = {
       enableScripts: true,
     };
-    webviewPanel.webview.html = this.getHtmlForWebview();
+    const json = lockfile.parse(document.getText()).object;
+    webviewPanel.webview.html = this.getHtmlForWebview(JSON.stringify(json));
   }
 
-  private getHtmlForWebview(): string {
+  private getHtmlForWebview(json: string): string {
     return `
         <!DOCTYPE html>
         <html lang="en">
@@ -39,7 +41,8 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
             <title>Cat Coding</title>
         </head>
         <body>
-            <img src="https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif" width="300" />
+          <h1>JSON 数据</h1>
+          <p>${json}</p>
         </body>
         </html>
     `;
