@@ -17,25 +17,41 @@
     "preview"
   ],
   "activationEvents": [
-    "onCommand:yarn-lock-preview.helloWorld"
+    "onCommand:yarn-lock-preview.previewYarnLock",
+    "onCustomEditor:yarn-lock-preview.yarnLock"
   ],
   "extensionDependencies": [
     "mariusschulz.yarn-lock-syntax"
   ],
   "main": "./out/extension.js",
   "contributes": {
+    "commands": [
+      {
+        "command": "yarn-lock-preview.switchEditorMode",
+        "title": "switch editor mode",
+        "icon": "$(rocket)"
+      }
+    ],
     "customEditors": [
       {
         "viewType": "yarn-lock-preview.yarnLock",
-        "displayName": "Cat Scratch",
+        "displayName": "Preview yarn.lock",
         "selector": [
           {
             "filenamePattern": "yarn.lock"
           }
         ],
-        "priority": "default"
+        "priority": "option"
       }
-    ]
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "yarn-lock-preview.switchEditorMode",
+          "group": "navigation"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "yarn esbuild-base --minify",
