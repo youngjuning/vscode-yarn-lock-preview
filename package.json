@@ -24,10 +24,16 @@
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
+    "customEditors": [
       {
-        "command": "yarn-lock-preview.helloWorld",
-        "title": "Hello World"
+        "viewType": "yarn-lock-preview.yarnLock",
+        "displayName": "Cat Scratch",
+        "selector": [
+          {
+            "filenamePattern": "yarn.lock"
+          }
+        ],
+        "priority": "default"
       }
     ]
   },
