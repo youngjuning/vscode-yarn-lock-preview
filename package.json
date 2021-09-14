@@ -17,7 +17,7 @@
     "preview"
   ],
   "activationEvents": [
-    "onCommand:yarn-lock-preview.previewYarnLock",
+    "onCommand:yarn-lock-preview.switchEditorMode",
     "onCustomEditor:yarn-lock-preview.yarnLock"
   ],
   "extensionDependencies": [
