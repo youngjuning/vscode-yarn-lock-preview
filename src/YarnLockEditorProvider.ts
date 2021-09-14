@@ -1,4 +1,5 @@
 import vscode from 'vscode';
+import { getUmiHTMLContent } from '@luozhu/vscode-utils';
 import * as lockfile from '@yarnpkg/lockfile';
 
 class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
@@ -38,24 +39,9 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
       default:
         json = json.object;
     }
-    webviewPanel.webview.html = this.getHtmlForWebview(JSON.stringify(json));
-  }
-
-  private getHtmlForWebview(json: string): string {
-    return `
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Cat Coding</title>
-        </head>
-        <body>
-          <h1>JSON 数据</h1>
-          <p>${json}</p>
-        </body>
-        </html>
-    `;
+    webviewPanel.webview.html = getUmiHTMLContent(this.context, webviewPanel, {
+      title: 'Yarn Lock Preview',
+    });
   }
 }
 
