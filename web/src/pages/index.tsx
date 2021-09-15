@@ -21,18 +21,16 @@ export default function HomePage() {
 
   return (
     <div>
-      {theme && (
-        <ReactJson
-          src={text}
-          name={false}
-          theme={theme}
-          style={{
-            backgroundColor: getCssVar('--vscode-editor-background'),
-            // TODO: 监听字体更改事件
-            fontSize: getCssVar('--vscode-editor-font-size'),
-          }}
-        />
-      )}
+      <ReactJson
+        src={text}
+        name={false}
+        theme={theme}
+        style={{
+          backgroundColor: getCssVar('--vscode-editor-background'),
+          // TODO: 监听字体更改事件
+          fontSize: getCssVar('--vscode-editor-font-size'),
+        }}
+      />
     </div>
   );
 }
