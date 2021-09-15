@@ -7,16 +7,8 @@ const channel = new Channel();
 export default function HomePage() {
   const [text, setText] = React.useState({});
   React.useEffect(() => {
-    channel.bind(async message => {
-      switch (message.method) {
-        case 'update': {
-          console.log(message);
-          setText(message.params);
-          break;
-        }
-        default:
-          break;
-      }
+    channel.bind('update', async message => {
+      setText(message.params);
     });
   }, []);
   return (

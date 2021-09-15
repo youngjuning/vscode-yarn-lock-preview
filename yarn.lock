@@ -957,12 +957,11 @@
   resolved "https://registry.nlark.com/@luozhu/prettier-config/download/@luozhu/prettier-config-1.2.0.tgz#5fed9ffb3526e52c869630eed8cb7bc761b60ed2"
   integrity sha1-X+2f+zUm5SyGljDu2Mt7x2G2DtI=
 
-"@luozhu/vscode-channel@^0.5.7":
-  version "0.5.7"
-  resolved "https://registry.nlark.com/@luozhu/vscode-channel/download/@luozhu/vscode-channel-0.5.7.tgz#ca8ae4aff190f7022d08fc4f88c4395895217194"
-  integrity sha1-yorkr/GQ9wItCPxPiMQ5WJUhcZQ=
+"@luozhu/vscode-channel@^0.6.2":
+  version "0.6.2"
+  resolved "https://registry.nlark.com/@luozhu/vscode-channel/download/@luozhu/vscode-channel-0.6.2.tgz#a7d9a8b351735a04ce96a34f44883e69909bf6ad"
+  integrity sha1-p9mos1FzWgTOlqNPRIg+aZCb9q0=
   dependencies:
-    lodash.get "^4.4.2"
     nanoid "^3.1.25"
 
 "@luozhu/vscode-utils@^0.7.3":
@@ -1288,6 +1287,11 @@
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.1.tgz#20f18294f797f2209b5f65c8e3b5c8e8261d127c"
   integrity sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==
+
+"@types/vscode-webview@^1.57.0":
+  version "1.57.0"
+  resolved "https://registry.nlark.com/@types/vscode-webview/download/@types/vscode-webview-1.57.0.tgz#bad5194d45ae8d03afc1c0f67f71ff5e7a243bbf"
+  integrity sha1-utUZTUWujQOvwcD2f3H/XnokO78=
 
 "@types/vscode@^1.60.0":
   version "1.60.0"
@@ -6633,11 +6637,6 @@ lodash.flow@^3.3.0:
   version "3.5.0"
   resolved "https://registry.npm.taobao.org/lodash.flow/download/lodash.flow-3.5.0.tgz#87bf40292b8cf83e4e8ce1a3ae4209e20071675a"
   integrity sha1-h79AKSuM+D5OjOGjrkIJ4gBxZ1o=
-
-lodash.get@^4.4.2:
-  version "4.4.2"
-  resolved "https://registry.npm.taobao.org/lodash.get/download/lodash.get-4.4.2.tgz#2d177f652fa31e939b4438d5341499dfa3825e99"
-  integrity sha1-LRd/ZS+jHpObRDjVNBSZ36OCXpk=
 
 lodash.isequal@^4.5.0:
   version "4.5.0"

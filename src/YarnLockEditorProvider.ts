@@ -46,7 +46,7 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
     const channel = new Channel(this.context, webviewPanel);
 
     function updateWebview() {
-      channel.call({ method: 'update', params: json });
+      channel.call('update', json);
     }
 
     updateWebview();
