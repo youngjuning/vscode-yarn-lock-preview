@@ -35,8 +35,6 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
       enableScripts: true,
     };
 
-    console.log('resolveCustomTextEditor');
-
     webviewPanel.webview.html = getUmiHTMLContent(this.context, webviewPanel, {
       title: 'Yarn Lock Preview',
     });
