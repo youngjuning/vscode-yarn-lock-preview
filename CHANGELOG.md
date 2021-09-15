@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.2](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.1...v0.0.2) (2021-09-15)
+
+
+### Bug Fixes
+
+* 优化性能并修复搜索 ([02bc407](https://github.com/youngjuning/vscode-yarn-lock-preview/commit/02bc407929db04a9264e25f2066a0f1055b104c2))
+
 ### 0.0.1 (2021-09-15)
 
 

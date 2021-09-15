@@ -2,7 +2,7 @@
   "name": "yarn-lock-preview",
   "displayName": "Yarn Lock Preview",
   "description": "Previews yarn.lock file",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "icon": "assets/logo.png",
   "private": "true",
   "workspaces": [
