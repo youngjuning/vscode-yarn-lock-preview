@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.2...v0.0.3) (2021-09-15)
+
+
+### Features
+
+* 更换 Logo 并添加录屏演示 ([6a0399d](https://github.com/youngjuning/vscode-yarn-lock-preview/commit/6a0399dd31645d1006874e9acbb2c390574fafde))
+
 ### [0.0.2](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.1...v0.0.2) (2021-09-15)
 
 
