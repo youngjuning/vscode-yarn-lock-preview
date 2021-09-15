@@ -53,7 +53,7 @@
             "filenamePattern": "yarn.lock"
           }
         ],
-        "priority": "option"
+        "priority": "default"
       }
     ],
     "menus": {
@@ -101,7 +101,7 @@
   },
   "dependencies": {
     "@luozhu/vscode-channel": "^0.6.2",
-    "@luozhu/vscode-utils": "^0.7.3",
+    "@luozhu/vscode-utils": "^0.8.2",
     "@yarnpkg/lockfile": "^1.1.0"
   },
   "devDependencies": {

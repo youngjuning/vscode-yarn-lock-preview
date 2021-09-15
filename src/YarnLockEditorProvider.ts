@@ -44,12 +44,15 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
       title: 'Yarn Lock Preview',
     });
     const channel = new Channel(this.context, webviewPanel);
-
+    vscode.window.onDidChangeActiveColorTheme(colorTheme => {
+      channel.call('updateColorTheme', colorTheme);
+    });
     function updateWebview() {
-      channel.call('update', json);
+      channel.call('updateWebview', json);
     }
 
     updateWebview();
+    channel.call('updateColorTheme', vscode.window.activeColorTheme);
   }
 }
 
