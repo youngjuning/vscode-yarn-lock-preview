@@ -36,6 +36,10 @@
     "mariusschulz.yarn-lock-syntax"
   ],
   "main": "./out/extension.js",
+  "galleryBanner": {
+    "color": "#2188b6",
+    "theme": "light"
+  },
   "contributes": {
     "commands": [
       {
