@@ -87,6 +87,7 @@ export default function HomePage() {
         theme={theme}
         displayDataTypes={false}
         displayObjectSize={false}
+        enableClipboard={false}
         style={{
           backgroundColor: getCssVar('--vscode-editor-background'),
           // TODO: 监听字体更改事件
