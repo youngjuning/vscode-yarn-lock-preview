@@ -7,9 +7,11 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-green.svg)](https://github.com/youngjuning/awesome-frontend-actions/blob/main/CONTRIBUTING.md)
 [![The MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 
-Previews yarn.lock file.
+Previews yarn.lock and search package.
 
-## 洛竹早茶馆
+![](./assets/screenshot.gif)
+
+## 关于作者
 
 ![](assets/luozhu.png)
 

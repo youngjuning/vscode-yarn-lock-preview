@@ -1,7 +1,7 @@
 {
   "name": "yarn-lock-preview",
   "displayName": "Yarn Lock Preview",
-  "description": "Previews yarn.lock file",
+  "description": "Previews yarn.lock and search package.",
   "version": "0.0.2",
   "icon": "assets/logo.png",
   "private": "true",
