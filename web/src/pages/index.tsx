@@ -10,10 +10,10 @@ export default function HomePage() {
   const [theme, setTheme] = React.useState<ThemeKeys>();
 
   React.useEffect(() => {
-    channel.bind('updateWebview', async message => {
+    channel.bind('updateWebview', message => {
       setText(message.params);
     });
-    channel.bind('updateColorTheme', async message => {
+    channel.bind('updateColorTheme', message => {
       const { kind } = message.params;
       setTheme(kind === 1 ? 'rjv-default' : 'monokai');
     });

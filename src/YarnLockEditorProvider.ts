@@ -8,7 +8,12 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
     const provider = new YarnLockEditorProvider(context);
     const providerRegistration = vscode.window.registerCustomEditorProvider(
       YarnLockEditorProvider.viewType,
-      provider
+      provider,
+      {
+        webviewOptions: {
+          retainContextWhenHidden: true, // 隐藏时保留上下文
+        },
+      }
     );
     return providerRegistration;
   }
@@ -29,29 +34,48 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
     webviewPanel.webview.options = {
       enableScripts: true,
     };
-    let json = lockfile.parse(document.getText());
-    switch (json.type) {
-      case 'merge':
-        // TODO: 处理 merge type
-        break;
-      case 'conflict':
-        // TODO: 处理 conflict type
-        break;
-      default:
-        json = json.object;
-    }
+
+    console.log('resolveCustomTextEditor');
+
     webviewPanel.webview.html = getUmiHTMLContent(this.context, webviewPanel, {
       title: 'Yarn Lock Preview',
     });
+
     const channel = new Channel(this.context, webviewPanel);
     vscode.window.onDidChangeActiveColorTheme(colorTheme => {
       channel.call('updateColorTheme', colorTheme);
     });
-    function updateWebview() {
+
+    function updateWebview(textDocument: vscode.TextDocument) {
+      let json = lockfile.parse(textDocument.getText());
+      switch (json.type) {
+        case 'merge':
+          // TODO: 处理 merge type
+          break;
+        case 'conflict':
+          // TODO: 处理 conflict type
+          break;
+        default:
+          json = json.object;
+      }
       channel.call('updateWebview', json);
     }
 
-    updateWebview();
+    // 注册钩子事件处理程序，这样我们就可以使 webview 与文本文档同步。
+    //
+    // 文本文件作为我们的模型，所以我们必须将文件中的变化同步到我们的编辑器。
+    // 请记住，一个文本文件也可以在多个自定义编辑器之间共享（例如，当你分割一个自定义编辑器时就会发生这种情况）。
+    const changeDocumentSubscription = vscode.workspace.onDidChangeTextDocument(e => {
+      if (e.document.uri.toString() === document.uri.toString()) {
+        updateWebview(e.document);
+      }
+    });
+    // 确保当我们的编辑器关闭时，移除了监听器。
+    webviewPanel.onDidDispose(() => {
+      changeDocumentSubscription.dispose();
+    });
+
+    updateWebview(document);
     channel.call('updateColorTheme', vscode.window.activeColorTheme);
   }
 }
