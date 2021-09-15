@@ -1,5 +1,6 @@
 import vscode from 'vscode';
 import { getUmiHTMLContent } from '@luozhu/vscode-utils';
+import Channel from '@luozhu/vscode-channel';
 import * as lockfile from '@yarnpkg/lockfile';
 
 class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
@@ -42,6 +43,13 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
     webviewPanel.webview.html = getUmiHTMLContent(this.context, webviewPanel, {
       title: 'Yarn Lock Preview',
     });
+    const channel = new Channel(this.context, webviewPanel);
+
+    function updateWebview() {
+      channel.call({ method: 'update', params: json });
+    }
+
+    updateWebview();
   }
 }
 
