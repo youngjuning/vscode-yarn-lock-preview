@@ -37,29 +37,36 @@ export default function HomePage() {
   };
   React.useEffect(() => {
     const result = {};
-    const isHaveAt = searchValue.indexOf('@') !== -1;
+    const isHaveZeroAt = searchValue.split('').filter(item => item === '@')?.length === 0;
+    const isHaveOneAt = searchValue.split('').filter(item => item === '@')?.length === 1;
+    const isHaveTwoAt = searchValue.split('').filter(item => item === '@')?.length === 2;
 
     Object.entries(data).forEach(([key, value]: [string, any]) => {
       if (value.dependencies) {
         Object.entries(value.dependencies).forEach(([dKey, dValue]: [string, any]) => {
-          if (!isHaveAt) {
-            if (dKey === searchValue) {
+          if (isHaveTwoAt || (isHaveOneAt && !searchValue.startsWith('@'))) {
+            if (`${dKey}@${dValue}` === searchValue) {
               result[key] = value;
             }
-          } else {
-            const [packageName, packageVersion] = searchValue.split('@');
-            if (dKey === packageName && dValue === packageVersion) {
+          } else if ((isHaveOneAt && searchValue.startsWith('@')) || isHaveZeroAt) {
+            if (dKey === searchValue) {
               result[key] = value;
             }
           }
         });
       }
-      if (!isHaveAt) {
+      if (isHaveTwoAt || (isHaveOneAt && !searchValue.startsWith('@'))) {
+        if (key === searchValue) {
+          result[key] = value;
+        }
+      } else if (isHaveOneAt && searchValue.startsWith('@')) {
+        if (`${key.split('@')[0]}@${key.split('@')[1]}` === searchValue) {
+          result[key] = value;
+        }
+      } else if (isHaveZeroAt) {
         if (key.split('@')[0] === searchValue) {
           result[key] = value;
         }
-      } else if (key === searchValue) {
-        result[key] = value;
       }
     });
     if (searchValue === '') {
@@ -88,6 +95,12 @@ export default function HomePage() {
         displayDataTypes={false}
         displayObjectSize={false}
         enableClipboard={false}
+        shouldCollapse={filed => {
+          if (filed.name) {
+            return true;
+          }
+          return false;
+        }}
         style={{
           backgroundColor: getCssVar('--vscode-editor-background'),
           // TODO: 监听字体更改事件
