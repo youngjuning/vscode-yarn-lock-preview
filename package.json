@@ -9,16 +9,25 @@
     "web"
   ],
   "license": "MIT",
+  "author": {
+    "email": "youngjuning@163.com",
+    "name": "Luozhu",
+    "url": "https://youngjuining.js.org"
+  },
   "publisher": "youngjuning",
   "engines": {
     "vscode": "^1.60.0"
   },
   "categories": [
-    "Visualization"
+    "Visualization",
+    "Programming Languages",
+    "Other"
   ],
   "keywords": [
     "yarn",
-    "preview"
+    "preview",
+    "yarn.lock",
+    "youngjuning"
   ],
   "bugs": {
     "url": "https://github.com/youngjuning/vscode-yarn-lock-preview/issues"
