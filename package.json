@@ -50,6 +50,7 @@
       {
         "command": "yarn-lock-preview.switchEditorMode",
         "title": "switch editor mode",
+        "category": "Yarn Lock Preview",
         "icon": "$(rocket)"
       }
     ],

@@ -11,6 +11,14 @@ Previews yarn.lock and search package.
 
 ![](./assets/screenshot.gif)
 
+### 命令
+
+- `Yarn Lock Preview: switch editor mode`：切换编辑器模式
+
+### 快速启动
+
+![](./assets/start.png)
+
 ## 关于作者
 
 ![](assets/luozhu.png)
