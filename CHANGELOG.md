@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.6](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.5...v0.0.6) (2021-09-16)
+
+
+### Bug Fixes
+
+* remove vscodeEnv ([5967ec7](https://github.com/youngjuning/vscode-yarn-lock-preview/commit/5967ec7793b9bd151b6cc566e1f1f0962430efe6))
+
 ### [0.0.5](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.4...v0.0.5) (2021-09-15)
 
 ### [0.0.4](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.3...v0.0.4) (2021-09-15)
