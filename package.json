@@ -53,14 +53,15 @@
             "filenamePattern": "yarn.lock"
           }
         ],
-        "priority": "default"
+        "priority": "option"
       }
     ],
     "menus": {
       "editor/title": [
         {
           "command": "yarn-lock-preview.switchEditorMode",
-          "group": "navigation"
+          "group": "navigation",
+          "when": "resourceFilename == yarn.lock"
         }
       ]
     }
@@ -101,7 +102,7 @@
   },
   "dependencies": {
     "@luozhu/vscode-channel": "^0.6.2",
-    "@luozhu/vscode-utils": "^0.8.3",
+    "@luozhu/vscode-utils": "^0.8.4",
     "@yarnpkg/lockfile": "^1.1.0"
   },
   "devDependencies": {
