@@ -101,7 +101,7 @@
   },
   "dependencies": {
     "@luozhu/vscode-channel": "^0.6.2",
-    "@luozhu/vscode-utils": "^0.8.2",
+    "@luozhu/vscode-utils": "^0.8.3",
     "@yarnpkg/lockfile": "^1.1.0"
   },
   "devDependencies": {
