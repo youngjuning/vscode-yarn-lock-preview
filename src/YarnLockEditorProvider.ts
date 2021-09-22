@@ -40,9 +40,6 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
     });
 
     const channel = new Channel(this.context, webviewPanel);
-    vscode.window.onDidChangeActiveColorTheme(colorTheme => {
-      channel.call('updateColorTheme', colorTheme);
-    });
 
     function updateWebview(textDocument: vscode.TextDocument) {
       let json = lockfile.parse(textDocument.getText());
@@ -59,6 +56,12 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
       channel.call('updateWebview', json);
     }
 
+    updateWebview(document);
+    channel.call('updateColorTheme', vscode.window.activeColorTheme);
+
+    vscode.window.onDidChangeActiveColorTheme(colorTheme => {
+      channel.call('updateColorTheme', colorTheme);
+    });
     // 注册钩子事件处理程序，这样我们就可以使 webview 与文本文档同步。
     //
     // 文本文件作为我们的模型，所以我们必须将文件中的变化同步到我们的编辑器。
@@ -72,9 +75,6 @@ class YarnLockEditorProvider implements vscode.CustomTextEditorProvider {
     webviewPanel.onDidDispose(() => {
       changeDocumentSubscription.dispose();
     });
-
-    updateWebview(document);
-    channel.call('updateColorTheme', vscode.window.activeColorTheme);
   }
 }
 
