@@ -2,7 +2,7 @@
   "name": "yarn-lock-preview",
   "displayName": "Yarn Lock Preview",
   "description": "Previews yarn.lock and search package.",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "icon": "assets/logo.png",
   "private": "true",
   "workspaces": [
@@ -112,7 +112,7 @@
   },
   "dependencies": {
     "@luozhu/vscode-channel": "^0.6.2",
-    "@luozhu/vscode-utils": "^0.8.6",
+    "@luozhu/vscode-utils": "^0.8.4",
     "@yarnpkg/lockfile": "^1.1.0"
   },
   "devDependencies": {
