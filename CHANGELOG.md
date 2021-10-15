@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.12](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.11...v0.0.12) (2021-10-15)
+
+
+### Bug Fixes
+
+* bump @luozhu/vscode-utils version to 0.8.7 ([87ddaa8](https://github.com/youngjuning/vscode-yarn-lock-preview/commit/87ddaa84be59d34d47502535c8ba74dddce3cdd8))
+
 ### [0.0.11](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.10...v0.0.11) (2021-10-14)
 
 ### [0.0.10](https://github.com/youngjuning/vscode-yarn-lock-preview/compare/v0.0.9...v0.0.10) (2021-10-14)
