@@ -964,10 +964,10 @@
   dependencies:
     nanoid "^3.1.25"
 
-"@luozhu/vscode-utils@^0.8.4":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.8.4.tgz#e0f5eada9ac00e522f1198c9a85e7187e509b1d6"
-  integrity sha512-tMQDNISmMt8HLDBL7mYV1TE29yCiG6GIKK9uuLI5KB1x3GfrBOgvDWY5Wu6KUZ7g8MKmHrB+DIrjkWRCJB96iA==
+"@luozhu/vscode-utils@^0.8.7":
+  version "0.8.7"
+  resolved "https://registry.yarnpkg.com/@luozhu/vscode-utils/-/vscode-utils-0.8.7.tgz#799a1806d493b024a55125a5399c54f24f9e9a39"
+  integrity sha512-Wr2ABRYs3rNml26bOQ82vOkB9zT/5qeVYbQA0no1SOxiUTtavP5oa07ozo+ct8pKAvVW2DwXNB8UdMRlKqv5yg==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
